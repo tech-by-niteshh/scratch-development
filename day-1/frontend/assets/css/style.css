@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+header{
+    height: 100px;
+    background-color: rgb(217, 185, 185);
+    
+}
+
+nav{
+    background-color: antiquewhite;
+}
+
+#logo img{
+    height: clamp(35px, 6vw, 55px);
+    width: auto;
+}
+

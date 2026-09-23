@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student managment system</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div id="logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="learning-platform" />
+          </a>
+        </div>
+        <div id="nav-links">
+          <a href="login.html"><button id="login">Login</button></a>
+          <a href="signup.html"><button id="signup">Signup</button></a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="landing">
+        <h1>welcome to the dashboard of Smart student managment system.</h1>
+        <p>
+          Hello teacher's and schools we provide the simplest and powerful
+          monitoring system for you school, students, attendance, data, course
+          and Batches.
+        </p>
+      </section>
+      <section id="contact">
+        <div id="contact-container">
+            <form action="/" method="post" class="contact-form">
+                <div class="contact-group">
+                    <label for="Name">Enter your name : </label>
+                    <input type="text" id="contact-name" class="contact-name" placeholder="Name here..." required>
+                </div>
+                <div class="contact-group">
+                    <label for="Email">Enter your E-mail :</label>
+                    <input type="email" id="contact-email" class="contact-email" placeholder="E-mail here..." required>
+                </div>
+                <div class="contact-group">
+                    <label for="contact-category">Select your category : </label>
+                    <select id="contact-category" class="contact-category" required>
+                        <option value="--select your category--">--Please select your category--</option>
+                        <option value="Enquiry">Enquiry</option>
+                        <option value="doubt">Doubt</option>
+                        <option value="fee-refund">fee-refund</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="Feedback">Feedback</option>
+                    </select>
+                </div>
+                <div class="contact-group">
+                    <label for="text">Enter Your message :</label>
+                    <input type="text" id="message" class="message" placeholder="Message here.." required>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
