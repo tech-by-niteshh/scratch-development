@@ -1,6 +1,6 @@
 const submitForm = document.querySelector('form[class="contact-form"]')
 
-async function HandleContactForm(e){
+async function HandleContactForm(e) {
     e.preventDefault();
     console.log("Intializing contact form data for sending to backend !")
 
@@ -12,11 +12,29 @@ async function HandleContactForm(e){
     }
     const response = await fetch("http://127.0.0.1:8000/api/contact-form", {
         method: "POST",
-        headers:{
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formData)
-});
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+
+
+
+    });
+
+    try {
+        const result = await response.json();
+
+        console.log("Result is : ", result)
+
+        if (response.ok) {
+            alert("data succesfully transferred to the adminstrator..!")
+        } else {
+            console.log("Backend is facing to a problem, please wait for the fix..")
+        }
+    }catch (error){
+        console.log("Backend is facing to a problem please wait to resolve the error..")
+        alert("Could not connect to the backend.")
+    }
 }
 
 submitForm.addEventListener("submit", HandleContactForm);
